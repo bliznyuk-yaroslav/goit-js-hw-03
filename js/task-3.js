@@ -1,17 +1,22 @@
-// 'use strict';
-// function checkForSpam(message){
-//     const lowerMessage = message.toLowerCase();
-//     return lowerMessage.includes("spam") || lowerMessage.includes("sale") ? true : false;
-//   }
+'use strict';
+function filterArray(numbers, value){
+    const newArray = [];
+    
+    for(let i = 0; numbers.length > i; i++){
+       
+        if (numbers[i]>value){
+            newArray.push(numbers[i])
+        } 
+    }      
+        return newArray
+  
 
-// console.log(checkForSpam("Latest technology news"));
-// console.log(checkForSpam("JavaScript weekly newsletter"));
-// console.log(checkForSpam("Get best sale offers now!"));
-// console.log(checkForSpam("Amazing SalE, only tonight!"));
-// console.log(checkForSpam("Trust me, this is not a spam message"));
-// console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
-// console.log(checkForSpam("[SPAM] How to earn fast money?"));
+}
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
 
-
-// //  Зроблено для візуально відступу між task при перевіркі
-// console.log(""); 
+//  Зроблено для візуально відступу між task при перевіркі
+console.log(""); 
